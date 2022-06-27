@@ -3,17 +3,12 @@ const colors = require('../colors.js')
 
 module.exports = {
   presets: [require('tailwindcss/defaultConfig')],
-  purge: {
-    content: [
-      'vendor/northeastern-web/**/*.php',
-      'vendor/northeastern-web/**/*.md',
-      'vendor/northeastern-web/**/*.html',
-    ],
-    options: {
-      safelist: {
-        deep: [/body/, /body\s/],
-      },
-    },
+  content: [
+    'vendor/northeastern-web/**/*.{php,md,html}',
+    'node_modules/@northeastern-web/**/*.{js,jsx}',
+  ],
+  safelist: {
+    pattern: [/body/, /body\s/],
   },
   theme: {
     extend: {

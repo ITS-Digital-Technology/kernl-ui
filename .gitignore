@@ -3,3 +3,8 @@
 /example
 index.html
 yarn-error.log
+dist/js/index.esm.mjs
+dist/js/index.esm.mjs.map
+dist/js/index.modern.mjs
+dist/js/index.modern.mjs.map
+*.DS_Store
