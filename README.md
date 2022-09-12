@@ -15,9 +15,9 @@ For documentation and examples for how to use this package, visit the [documenta
 - `npm run build` — Compile the CDN build of the package.
 
 ## Release Versions
-- [1.x](https://github.com/ITS-Digital-Technology/kernl-ui/releases/tag/v1.4.1)
-- [2.x](https://github.com/ITS-Digital-Technology/kernl-ui/releases/tag/v2.0.1)
-- [3.x](https://github.com/ITS-Digital-Technology/kernl-ui/releases/tag/v3.0.0)
+- [1.x](https://github.com/ITS-Digital-Technology/kernl-ui/releases/tag/v1.4.1) - Released in 2019
+- [2.x](https://github.com/ITS-Digital-Technology/kernl-ui/releases/tag/v2.0.1) - Released in 2021
+- [3.x](https://github.com/ITS-Digital-Technology/kernl-ui/releases/tag/v3.0.0) - Released in 2022
 
 ### Dependency Compatability
 
