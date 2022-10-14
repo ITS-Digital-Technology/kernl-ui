@@ -18,7 +18,7 @@ $('.\\+children > a')
 
   const $this = $(this)
   const $parent = $this.parent()
-  const $submenu = $parent.find('.__submenu')
+  // const $submenu = $parent.find('.__submenu')
   const $siblings = $parent.siblings().find('.__submenu')
 
   // Condition block if menu has been opened
@@ -32,7 +32,7 @@ $('.\\+children > a')
     $siblings.hide(350)
   }
 
-  // Add .__submenu--open when clicked
-  $parent.addClass('submenu-open')
-  $submenu.show(350)
+  // Add .submenu-open when clicked
+  // $parent.addClass('submenu-open')
+  // $submenu.show(350)
 });
