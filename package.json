@@ -38,7 +38,7 @@
     "cross-env": "^5.1.4",
     "laravel-mix": "^4.0.15",
     "resolve-url-loader": "2.3.1",
-    "sass": "^1.17.3",
+    "sass": "^1.56.1",
     "sass-loader": "^7.1.0",
     "vue-template-compiler": "^2.6.10",
     "webpack": "^4.29.6",
@@ -52,7 +52,6 @@
     "feather-icons": "^4.7.3",
     "formstone": "^1.4.13",
     "gumshoejs": "^5.1.1",
-    "jquery": "^3.0.0",
-    "node-sass": "^7.0.3"
+    "jquery": "^3.0.0"
   }
 }

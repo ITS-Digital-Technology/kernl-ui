@@ -10,7 +10,7 @@ img {
 
 img,
 embed,
-iframe:not(.wufoo-form-container):not(.ar--object),
+iframe:not(.wufoo-form-container):not(.ar--object):not([id^=trumba]),
 object,
 audio,
 video {
