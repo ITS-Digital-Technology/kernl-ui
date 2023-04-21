@@ -12,18 +12,17 @@
     "build": "microbundle --name=@northeastern-web/kernl-ui --external=none && microbundle -i src/js/browser-update.js -o dist/js/browser-update.js --name=@northeastern-web/browser-update --no-pkg-main -f cjs && npx babel-node scripts/build.js"
   },
   "dependencies": {
-    "alpinejs": "^3.10.5",
     "feather-icons": "^4.29.0",
-    "tailwindcss": "^3.2.4"
+    "tailwindcss": "^3.3.1"
   },
   "devDependencies": {
-    "autoprefixer": "^10.4.7",
-    "postcss": "^8.4.14",
-    "@babel/cli": "^7.17.10",
-    "@babel/core": "^7.18.5",
-    "@babel/node": "^7.18.5",
-    "clean-css": "^5.3.0",
+    "autoprefixer": "^10.4.14",
+    "postcss": "^8.4.23",
+    "@babel/cli": "^7.21.0",
+    "@babel/core": "^7.21.4",
+    "@babel/node": "^7.20.7",
+    "clean-css": "^5.3.2",
     "lodash.clonedeep": "^4.5.0",
-    "microbundle": "^0.15.0"
+    "microbundle": "^0.15.1"
   }
 }
