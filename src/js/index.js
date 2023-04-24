@@ -1,4 +1,7 @@
 import Feather from 'feather-icons'
-window.Feather = Feather
+
+if (window !== 'undefined') {
+    window.Feather = Feather
+}
 
 Feather.replace()
