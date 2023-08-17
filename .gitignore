@@ -4,3 +4,6 @@
 index.html
 package-lock.json
 yarn-error.log
+.DS_Store
+dist/js/index.esm.mjs*
+dist/js/index.modern.mjs*
