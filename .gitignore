@@ -3,6 +3,10 @@
 /example
 index.html
 yarn-error.log
+<<<<<<< HEAD
 .DS_Store
 dist/js/index.esm.mjs*
 dist/js/index.modern.mjs*
+=======
+.DS_Store
+>>>>>>> 3205ebea89e054d43f46a9b23b3aafd92a7433b1
