@@ -12,4 +12,4 @@ For documentation and examples for how to use this package, visit the [documenta
 
 ### Available tasks
 
-- `npm run build` — Compile the CDN build of the package.
+- `npm run build-cdn` — Compile the CDN build of the package.
