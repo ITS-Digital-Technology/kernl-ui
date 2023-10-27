@@ -6,7 +6,7 @@
   "unpkg": "dist/js/index.umd.js",
   "description": "Northeastern front-end framework built on Tailwind CSS and Alpine.js.",
   "style": "dist/css/index.css",
-  "repository": "https://github.com/northeastern-web/kernl-ui.git",
+  "repository": "https://github.com/ITS-Digital-Technology/kernl-ui.git",
   "homepage": "https://northeastern.netlify.com",
   "scripts": {
     "build": "microbundle --name=@northeastern-web/kernl-ui --external=none && microbundle -i src/js/browser-update.js -o dist/js/browser-update.js --name=@northeastern-web/browser-update --no-pkg-main -f cjs && npx babel-node scripts/build.js"
