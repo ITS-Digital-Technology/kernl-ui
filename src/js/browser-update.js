@@ -3,7 +3,7 @@ window.$buoop = {
     'Your browser, {brow_name}, is not supported on this site. <a{up_but}>Update your browser</a> for the best experience.',
   required: { e: -4, f: -3, o: -3, s: -1, c: -3 },
   insecure: true,
-  api: 2020.1,
+  api: 2026.03,
   reminder: 0,
   reminderClosed: 24,
 }
