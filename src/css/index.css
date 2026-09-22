@@ -1,5 +1,5 @@
-@tailwind base;
+@config "../../cdn.config.js";
 
-@tailwind components;
+@import "tailwindcss" source(none);
 
-@tailwind utilities;
+@source "./cdn-candidates.source.txt";
