@@ -1,6 +1,6 @@
 {
   "name": "@northeastern-web/kernl-ui",
-  "version": "3.0.0",
+  "version": "4.0.0",
   "source": "src/js/index.js",
   "main": "dist/js/index.js",
   "unpkg": "dist/js/index.umd.js",
@@ -9,20 +9,20 @@
   "repository": "https://github.com/ITS-Digital-Technology/kernl-ui.git",
   "homepage": "https://northeastern.netlify.com",
   "scripts": {
-    "build": "microbundle --name=@northeastern-web/kernl-ui --external=none && microbundle -i src/js/browser-update.js -o dist/js/browser-update.js --name=@northeastern-web/browser-update --no-pkg-main -f cjs && npx babel-node scripts/build.js"
+    "build": "npm run build:js && npm run build:css",
+    "build:js": "microbundle --name=@northeastern-web/kernl-ui --external=none && microbundle -i src/js/browser-update.js -o dist/js/browser-update.js --name=@northeastern-web/browser-update --no-pkg-main -f cjs",
+    "build:css": "node scripts/generate-cdn-candidates.js && tailwindcss -c ./cdn.config.js -i ./src/css/index.css -o ./dist/css/index.css --minify",
+    "build:css:source": "npm run build:css && node scripts/generate-cdn-source.js"
   },
   "dependencies": {
-    "feather-icons": "^4.29.0",
-    "tailwindcss": "^3.4.17",
+    "feather-icons": "^4.29.2",
+    "tailwindcss": "^4.3.3",
     "lodash.clonedeep": "^4.5.0"
   },
   "devDependencies": {
-    "autoprefixer": "^10.4.14",
-    "postcss": "^8.4.23",
     "@babel/cli": "^7.21.0",
     "@babel/core": "^7.21.4",
-    "@babel/node": "^7.20.7",
-    "clean-css": "^5.3.2",
+    "@tailwindcss/cli": "^4.3.3",
     "microbundle": "^0.15.1"
   }
 }
