@@ -10,7 +10,7 @@ module.exports = plugin(function ({ addBase, addComponents, theme }) {
       color: theme('colors.black'),
       backgroundColor: theme('colors.yellow.400'),
       fontSize: '1rem',
-      fontFamily: theme('fontFamily.sans'),
+      'font-family': theme('fontFamily.sans'),
       boxShadow: theme('boxShadow.default'),
       animation: 'none',
     },
@@ -47,16 +47,14 @@ module.exports = plugin(function ({ addBase, addComponents, theme }) {
   // Container
   addComponents({
     '.container': {
-      'max-width': '1440px',
-      'margin-left': 'auto',
-      'margin-right': 'auto',
-      'padding-left': '1rem',
-      'padding-right': '1rem',
-    },
-    [`@screen lg`]: {
-      '.container': {
-        'padding-left': '4rem',
-        'padding-right': '4rem',
+      maxWidth: '1440px',
+      marginLeft: 'auto',
+      marginRight: 'auto',
+      paddingLeft: '1rem',
+      paddingRight: '1rem',
+      '@media (min-width: 1024px)': {
+        paddingLeft: '4rem',
+        paddingRight: '4rem',
       },
     },
   })
