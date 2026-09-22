@@ -1,30 +1,29 @@
-const fs = require('fs')
-const postcss = require('postcss')
-const tailwind = require('tailwindcss')
-const CleanCSS = require('clean-css')
+const { spawnSync } = require('child_process')
 
-console.log('Building kernl(ui) CSS...')
+function run(command, args) {
+  const result = spawnSync(command, args, { stdio: 'inherit' })
 
-fs.readFile(`./src/css/index.css`, (err, css) => {
-  if (err) throw err
+  if (result.status !== 0) {
+    process.exit(result.status || 1)
+  }
+}
 
-  return postcss([tailwind('./cdn.config.js'), require('autoprefixer')])
-    .process(css, {
-      from: `./src/css/index.css`,
-      to: `./dist/css/index.css`,
-      map: { inline: false },
-    })
-    .then((result) => {
-      fs.writeFileSync(`./dist/css/index.css`, result.css)
-      if (result.map) {
-        fs.writeFileSync(`./dist/css/index.css.map`, String(result.map))
-      }
-      return result
-    })
-    .then((result) => {
-      const minified = new CleanCSS().minify(result.css)
-      fs.writeFileSync(`./dist/css/index.css`, minified.styles)
+console.log('Building kernl(ui) CSS with TailwindCSS v4 CLI...')
 
-      console.log('kernl(ui) CSS built successfully!')
-    })
-})
+run(process.execPath, ['scripts/generate-cdn-candidates.js'])
+
+run(
+  process.platform === 'win32' ? 'npx.cmd' : 'npx',
+  [
+    'tailwindcss',
+    '-c',
+    './cdn.config.js',
+    '-i',
+    './src/css/index.css',
+    '-o',
+    './dist/css/index.css',
+    '--minify',
+  ],
+)
+
+console.log('kernl(ui) CSS built successfully!')
