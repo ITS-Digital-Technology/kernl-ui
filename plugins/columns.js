@@ -1,4 +1,6 @@
-module.exports = function({ addUtilities, addComponents, config, variants }) {
+const plugin = require('tailwindcss/plugin')
+
+module.exports = plugin(function ({ addUtilities, addComponents, theme }) {
     const utilities = {
         '.col-none': {
             columnCount: 'initial',
@@ -12,25 +14,25 @@ module.exports = function({ addUtilities, addComponents, config, variants }) {
         '.col-4': {
             columnCount: '4',
         },
-    };
+    }
 
-    addUtilities(utilities, variants('columns', ['responsive']));
+    addUtilities(utilities)
 
     const components = {
         '.row': {
-            margin: '-' + config('theme.margin.4'),
+            margin: `-${theme('spacing.4')}`,
             display: 'flex',
             flexWrap: 'wrap',
         },
         '.row + .row': {
-            marginTop: config('theme.margin.4'),
+            marginTop: theme('spacing.4'),
         },
         '.column': {
             width: '100%',
             display: 'inline-block',
-            padding: config('theme.padding.4'),
+            padding: theme('spacing.4'),
         },
-    };
+    }
 
-    addComponents(components);
-};
+    addComponents(components)
+})
