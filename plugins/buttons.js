@@ -1,4 +1,6 @@
-module.exports = function ({ addComponents, theme }) {
+const plugin = require('tailwindcss/plugin')
+
+module.exports = plugin(function ({ addComponents, theme }) {
   const commonStyles = {
     display: 'inline-flex',
     alignItems: 'center',
@@ -7,7 +9,7 @@ module.exports = function ({ addComponents, theme }) {
     whiteSpace: 'nowrap',
     borderWidth: '1px',
     borderColor: 'transparent',
-    transitionProperty: theme('transitions.colors'),
+    transitionProperty: theme('transitionProperty.colors'),
     transitionDuration: theme('transitionDuration.100'),
     '&:focus': {
       outline: 'none',
@@ -59,4 +61,4 @@ module.exports = function ({ addComponents, theme }) {
   }
 
   addComponents(components)
-}
+})
