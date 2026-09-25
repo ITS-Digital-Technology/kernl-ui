@@ -16,13 +16,20 @@
   },
   "dependencies": {
     "feather-icons": "^4.29.2",
-    "tailwindcss": "^4.3.3",
-    "lodash.clonedeep": "^4.5.0"
+    "lodash.clonedeep": "^4.5.0",
+    "tailwindcss": "^4.3.3"
   },
   "devDependencies": {
     "@babel/cli": "^7.21.0",
     "@babel/core": "^7.21.4",
     "@tailwindcss/cli": "^4.3.3",
     "microbundle": "^0.15.1"
+  },
+  "overrides": {
+    "microbundle": {
+      "rollup-plugin-terser": {
+        "serialize-javascript": "^7.1.2"
+      }
+    }
   }
 }
