@@ -65,8 +65,5 @@ module.exports = {
       full: '100%',
     },
   },
-  corePlugins: {
-    container: false,
-  },
   plugins: [require('../plugins/base.js')],
 }
