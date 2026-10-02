@@ -5,10 +5,13 @@ module.exports = {
   content: [
     'vendor/northeastern-web/**/*.{php,md,html}',
     'node_modules/@northeastern-web/**/*.{js,jsx}',
-  ],
-  safelist: [
-    { pattern: /body/ },
-    { pattern: /body\s/ },
+    // kernl registers its classes through plugins and needs no scanning.
+    // Without this exclusion the glob above scans kernl's own package: its
+    // .js files (scripts/, and feather-icons' tag list in dist/js) leak bare
+    // utilities such as `shadow` and `container` into consumers, and under
+    // Tailwind 4's automatic source detection the CDN candidate lists in
+    // src/css/*.txt inflate a consumer's stylesheet to ~17 MB.
+    '!node_modules/@northeastern-web/kernl-ui/**',
   ],
   theme: {
     colors: colors,

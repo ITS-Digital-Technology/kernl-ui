@@ -25,6 +25,20 @@ By default the generator removes slash-opacity variants, which are the main sour
 
 [scripts/generate-cdn-source.js](scripts/generate-cdn-source.js) parses the freshly built [dist/css/index.css](dist/css/index.css), writes [src/css/cdn-full.source.txt](src/css/cdn-full.source.txt), and fails if malformed class tokens are extracted.
 
+### Consuming the preset with Tailwind CSS v4
+
+The preset's `content` globs exclude kernl(ui)'s own package. kernl(ui)'s
+classes come from its plugins, so nothing in the package needs scanning,
+and scanning it would pull the CDN candidate lists into your build.
+
+Tailwind CSS v4 ignores `safelist` in a JavaScript config loaded through
+`@config`, so the preset no longer declares one. To force classes into a
+build that no source file mentions, use `@source inline()` in your CSS:
+
+```css
+@source inline("container btn btn-lg");
+```
+
 ## Release History
 
 | Version | Release Year | Link |
