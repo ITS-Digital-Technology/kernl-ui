@@ -25,6 +25,20 @@ By default the generator removes slash-opacity variants, which are the main sour
 
 [scripts/generate-cdn-source.js](scripts/generate-cdn-source.js) parses the freshly built [dist/css/index.css](dist/css/index.css), writes [src/css/cdn-full.source.txt](src/css/cdn-full.source.txt), and fails if malformed class tokens are extracted.
 
+### Consuming the preset with Tailwind CSS v4
+
+The preset's `content` globs exclude kernl(ui)'s own package. kernl(ui)'s
+classes come from its plugins, so nothing in the package needs scanning,
+and scanning it would pull the CDN candidate lists into your build.
+
+Tailwind CSS v4 ignores `safelist` in a JavaScript config loaded through
+`@config`, so the preset no longer declares one. To force classes into a
+build that no source file mentions, use `@source inline()` in your CSS:
+
+```css
+@source inline("container btn btn-lg");
+```
+
 ## Release History
 
 | Version | Release Year | Link |
@@ -32,7 +46,7 @@ By default the generator removes slash-opacity variants, which are the main sour
 | 1.x | 2019 | [v1.4.1](https://github.com/ITS-Digital-Technology/kernl-ui/releases/tag/v1.4.1) |
 | 2.x | 2021 | [v2.0.1](https://github.com/ITS-Digital-Technology/kernl-ui/releases/tag/v2.0.1) |
 | 3.x | 2026 | [v3.0.0](https://github.com/ITS-Digital-Technology/kernl-ui/releases/tag/v3.0.0) |
-| 4.x | 2026 | [v4.0.0](https://github.com/ITS-Digital-Technology/kernl-ui/releases/tag/v4.0.0) |
+| 4.x | 2026 | [v4.0.0-alpha.2](https://github.com/ITS-Digital-Technology/kernl-ui/releases/tag/v4.0.0-alpha.2) |
 
 ### Dependency Compatibility
 

@@ -1,6 +1,6 @@
 {
   "name": "@northeastern-web/kernl-ui",
-  "version": "4.0.0",
+  "version": "4.0.0-alpha.2",
   "source": "src/js/index.js",
   "main": "dist/js/index.js",
   "unpkg": "dist/js/index.umd.js",
