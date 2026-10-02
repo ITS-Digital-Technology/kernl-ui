@@ -19,7 +19,7 @@ Run `npm install` to install the package.
 |---------|--------------|------|
 | 1.x | 2019 | [v1.4.1](https://github.com/ITS-Digital-Technology/kernl-ui/releases/tag/v1.4.1) |
 | 2.x | 2021 | [v2.0.1](https://github.com/ITS-Digital-Technology/kernl-ui/releases/tag/v2.0.1) |
-| 3.x | 2026 | [v3.0.0](https://github.com/ITS-Digital-Technology/kernl-ui/releases/tag/v3.0.0) |
+| 3.x | 2026 | [v3.0.1](https://github.com/ITS-Digital-Technology/kernl-ui/releases/tag/v3.0.1) |
 
 ### Dependency Compatibility
 
